@@ -17,6 +17,11 @@ h1{
 	transform: translateY(-50%)
 }
 
+.no-float{
+	text-align: center;
+    margin: 0 auto;
+    float: none;
+}
 
 .box{
 	width: 100px;

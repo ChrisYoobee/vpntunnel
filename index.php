@@ -152,32 +152,6 @@
         </div>
 
         </div>
-
-
-
-		 <!-- <div class="row">
-
-
-
-				<?php if($programmes->have_posts()): ?>
-					<?php while($programmes->have_posts()): $programmes->the_post();?>
-                        <div class=" catagories">
-
-    						<h3><?php the_title(); ?></h3>
-                            <div <?php  the_post_thumbnail('board-game-thumbnail') ?> >  </div>
-    						<div class="game-thumbnails"><?php the_content(); ?></div>
-
-                        </div>
-
-					<?php endwhile; ?>
-				<?php endif; ?>
-
-			</div> -->
-
-
-
-
-
 		</div>
 	</div>
 
@@ -188,7 +162,7 @@
 
 </div>
 
-	</div>
+</div> <!-- First Row -->
 
 
 
@@ -196,14 +170,10 @@
 
 
 <div class="what-people-saying">
+    <div class="row v-align">
+        <div class="col-md-10 no-float ">
 
-<div class="col-md-10 offset-md-1">
-
-
-    <div class="row">
-        <div class="col-md-4 col-xs-12">
-
-
+            <div class="col-md-4 col-xs-12">
                 <?php
                         $parms = array(
                         'type'=>'post',
@@ -211,20 +181,16 @@
                     );
                     $programmes = new WP_Query($parms);
                  ?>
+                <?php if($programmes->have_posts()): ?>
+                    <?php while($programmes->have_posts()): $programmes->the_post();?>
+                        <h3><?php the_title(); ?></h3>
+                        <div><?php the_content(); ?></div>
 
-        <?php if($programmes->have_posts()): ?>
-            <?php while($programmes->have_posts()): $programmes->the_post();?>
-                <h3><?php the_title(); ?></h3>
-                <div><?php the_content(); ?></div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
 
-            <?php endwhile; ?>
-        <?php endif; ?>
-
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-
-
+            <div class="col-md-4 col-xs-12">
                 <?php
                         $parms = array(
                         'type'=>'post',
@@ -232,40 +198,35 @@
                     );
                     $programmes = new WP_Query($parms);
                  ?>
+                <?php if($programmes->have_posts()): ?>
+                    <?php while($programmes->have_posts()): $programmes->the_post();?>
+                        <h3><?php the_title(); ?></h3>
+                        <div><?php the_content(); ?></div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
 
-        <?php if($programmes->have_posts()): ?>
-            <?php while($programmes->have_posts()): $programmes->the_post();?>
-                <h3><?php the_title(); ?></h3>
-                <div><?php the_content(); ?></div>
-
-            <?php endwhile; ?>
-        <?php endif; ?>
-
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-
-
+            <div class="col-md-4 col-xs-12">
                 <?php
                         $parms = array(
                         'type'=>'post',
-                        'category_name'=>'wsr'
+                        'category_name'=>'wsj'
                     );
                     $programmes = new WP_Query($parms);
                  ?>
+                <?php if($programmes->have_posts()): ?>
+                    <?php while($programmes->have_posts()): $programmes->the_post();?>
+                        <h3><?php the_title(); ?></h3>
+                        <div><?php the_content(); ?></div>
 
-        <?php if($programmes->have_posts()): ?>
-            <?php while($programmes->have_posts()): $programmes->the_post();?>
-                <h3><?php the_title(); ?></h3>
-                <div><?php the_content(); ?></div>
-
-            <?php endwhile; ?>
-        <?php endif; ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
 
         </div>
     </div>
 </div>
-</div>
+
 
 
 <?php get_footer() ?>
