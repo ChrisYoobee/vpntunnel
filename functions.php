@@ -169,7 +169,7 @@ add_action('customize_register', 'bottomBanner_text');
 function headerBanner_text($wp_customize){
 	//Settings
 	$wp_customize->add_setting('headerBanner_text', array(
-		'default' => 'This is your header banner text',
+		'default' => 'Take Back Your Privacy',
 		'transport' => 'refresh'
 	));
 

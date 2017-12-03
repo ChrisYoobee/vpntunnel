@@ -3,7 +3,7 @@
 		<div class="footer">
 
 
-			
+
 			<p> <?php echo get_theme_mod('newTheme_footer_text'); ?> </p>
 			<div class="footer-img">
 				<img src="./wp-content/themes/vpntunnelTheme/assets/footer-img.png" alt="footer image">
