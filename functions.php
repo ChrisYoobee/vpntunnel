@@ -195,3 +195,39 @@ add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
     add_image_size( 'single-post-thumbnail', 500, 1000, true );
     add_image_size( 'board-game-thumbnail', 150, 150 );
+
+
+	function VPN_init() {
+	    $labels = array(
+	        'name'               => _x( 'VPN Info', 'post type general name' ),
+	        'singular_name'      => _x( 'VPN Info', 'post type singular name' ),
+	        'menu_name'          => _x( 'VPN Info', 'admin menu' ),
+	        'name_admin_bar'     => _x( 'VPN Info', 'add new on admin bar' ),
+	        'add_new'            => _x( 'Add New VPN Info', 'VPN Info' ),
+	        'add_new_item'       => __( 'Add New' ),
+	        'new_item'           => __( 'New VPN Info' ),
+	        'edit_item'          => __( 'Edit VPN Info' ),
+	        'view_item'          => __( 'View VPN Info' ),
+	        'all_items'          => __( 'All VPN Info' ),
+	        'search_items'       => __( 'Search VPN Info' ),
+	        'parent_item_colon'  => __( 'Parent VPN Info:' ),
+	        'not_found'          => __( 'No VPN Info found.' ),
+	        'not_found_in_trash' => __( 'No VPN Info found in Trash.' )
+	    );
+	    $args = array(
+	        'labels' => $labels,
+	        'public' => true,
+	        'show_ui' => true,
+	        'capability_type' => 'post',
+	        'hierarchical' => true,
+	        'rewrite' => array('slug' => 'VPN'),
+	        'query_var' => true,
+	        'menu_icon' => 'dashicons-clipboard',
+	        'supports' => array(
+	            'thumbnail',
+	            'title',
+	            'editor',),
+	        );
+	    register_post_type( 'VPN', $args );
+	}
+	add_action( 'init', 'VPN_init' );

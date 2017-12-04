@@ -212,8 +212,50 @@ li {
 }
 
 
+.vpn-services{
+	height: 100vh;
+	width: 100%;
+	background-color: white;
+	
+}
+
+.basic-service{
+	height: 500px;
+	width: 90%;
+	background-color: #e4e4e4;
+	border-radius: 5px;
+}
+
+.best-service{
+	height: 600px;
+	width: 90%;
+	background-color: #e4e4e4;
+	border-radius: 5px;
+}
+
+.service-top-section{
+	height: 150px;
+	width: 100%;
+	background-color: #2A353C;
+	border-radius: 5px; F04E4E
+}
+.service-top-section h2{
+	color: white;
+}
+
+.best-top-section{
+	height: 150px;
+	width: 100%;
+	background-color: #F04E4E;
+	border-radius: 5px;
+}
+
+.best-top-section h2{
+	color: white;
+}
 
 
+/* Footer */
 
 .footer{
 	width: 100%;
