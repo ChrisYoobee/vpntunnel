@@ -26,10 +26,10 @@
                 'type'=>'post',
                 'category_name'=>'why-vpn-title'
             );
-            $programmes = new WP_Query($parms);
+            $vpn = new WP_Query($parms);
          ?>
-         <?php if($programmes->have_posts()): ?>
-             <?php while($programmes->have_posts()): $programmes->the_post();?>
+         <?php if($vpn->have_posts()): ?>
+             <?php while($vpn->have_posts()): $vpn->the_post();?>
                  <h3><?php the_title(); ?></h3>
                  <div><?php the_content(); ?></div>
 
@@ -41,68 +41,27 @@
 
 
 			<div class="row">
-                <div class="col-md-4 col-xs-12">
 
 
-                        <?php
-            					$parms = array(
-            					'type'=>'post',
-            					'category_name'=>'lightning-speed'
-            				);
-            				$programmes = new WP_Query($parms);
-            			 ?>
 
-				<?php if($programmes->have_posts()): ?>
-					<?php while($programmes->have_posts()): $programmes->the_post();?>
-						<h3><?php the_title(); ?></h3>
-						<div><?php the_content(); ?></div>
+                    <?php
+                            $parms2 = array(
+                            'post_type'=>'vpn',
 
-					<?php endwhile; ?>
-				<?php endif; ?>
+                        );
+                        $VPN = new WP_Query($parms2);
+                     ?>
 
-                </div>
-
-                <div class="col-md-4 col-xs-12">
-
-
-                        <?php
-                                $parms = array(
-                                'type'=>'post',
-                                'category_name'=>'super-fast'
-                            );
-                            $programmes = new WP_Query($parms);
-                         ?>
-
-                <?php if($programmes->have_posts()): ?>
-                    <?php while($programmes->have_posts()): $programmes->the_post();?>
-                        <h3><?php the_title(); ?></h3>
-                        <div><?php the_content(); ?></div>
-
+                    <?php if($VPN->have_posts()): ?>
+                    <?php while($VPN->have_posts()): $VPN->the_post();?>
+                            <div class="col-md-4 col-xs-12">
+                    <?php the_post_thumbnail(); ?>
+                    <h3><?php the_title(); ?></h3>
+                    <div><?php the_content(); ?></div>
+</div>
                     <?php endwhile; ?>
-                <?php endif; ?>
+                    <?php endif; ?>
 
-                </div>
-
-                <div class="col-md-4 col-xs-12">
-
-
-                        <?php
-                                $parms = array(
-                                'type'=>'post',
-                                'category_name'=>'no-logs'
-                            );
-                            $programmes = new WP_Query($parms);
-                         ?>
-
-                <?php if($programmes->have_posts()): ?>
-                    <?php while($programmes->have_posts()): $programmes->the_post();?>
-                        <h3><?php the_title(); ?></h3>
-                        <div><?php the_content(); ?></div>
-
-                    <?php endwhile; ?>
-                <?php endif; ?>
-
-                </div>
 			</div>
         <div class="why-vpn-content-2">
 
@@ -116,11 +75,11 @@
                                 'type'=>'post',
                                 'category_name'=>'easy-vpn'
                             );
-                            $programmes = new WP_Query($parms);
+                            $vpn = new WP_Query($parms);
                          ?>
 
-                <?php if($programmes->have_posts()): ?>
-                    <?php while($programmes->have_posts()): $programmes->the_post();?>
+                <?php if($vpn->have_posts()): ?>
+                    <?php while($vpn->have_posts()): $vpn->the_post();?>
                         <h3><?php the_title(); ?></h3>
                         <div><?php the_content(); ?></div>
 
@@ -136,11 +95,11 @@
                                 'type'=>'post',
                                 'category_name'=>'kill-switch'
                             );
-                            $programmes = new WP_Query($parms);
+                            $vpn = new WP_Query($parms);
                          ?>
 
-                <?php if($programmes->have_posts()): ?>
-                    <?php while($programmes->have_posts()): $programmes->the_post();?>
+                <?php if($vpn->have_posts()): ?>
+                    <?php while($vpn->have_posts()): $vpn->the_post();?>
                         <h3><?php the_title(); ?></h3>
                         <div><?php the_content(); ?></div>
 
@@ -179,10 +138,10 @@
                         'type'=>'post',
                         'category_name'=>'forbes'
                     );
-                    $programmes = new WP_Query($parms);
+                    $vpn = new WP_Query($parms);
                  ?>
-                <?php if($programmes->have_posts()): ?>
-                    <?php while($programmes->have_posts()): $programmes->the_post();?>
+                <?php if($vpn->have_posts()): ?>
+                    <?php while($vpn->have_posts()): $vpn->the_post();?>
                         <h3><?php the_title(); ?></h3>
                         <div><?php the_content(); ?></div>
 
@@ -196,10 +155,10 @@
                         'type'=>'post',
                         'category_name'=>'the-guardian'
                     );
-                    $programmes = new WP_Query($parms);
+                    $vpn = new WP_Query($parms);
                  ?>
-                <?php if($programmes->have_posts()): ?>
-                    <?php while($programmes->have_posts()): $programmes->the_post();?>
+                <?php if($vpn->have_posts()): ?>
+                    <?php while($vpn->have_posts()): $vpn->the_post();?>
                         <h3><?php the_title(); ?></h3>
                         <div><?php the_content(); ?></div>
                     <?php endwhile; ?>
@@ -212,10 +171,10 @@
                         'type'=>'post',
                         'category_name'=>'wsj'
                     );
-                    $programmes = new WP_Query($parms);
+                    $vpn = new WP_Query($parms);
                  ?>
-                <?php if($programmes->have_posts()): ?>
-                    <?php while($programmes->have_posts()): $programmes->the_post();?>
+                <?php if($vpn->have_posts()): ?>
+                    <?php while($vpn->have_posts()): $vpn->the_post();?>
                         <h3><?php the_title(); ?></h3>
                         <div><?php the_content(); ?></div>
 
@@ -261,22 +220,7 @@
 </div>
 
 
-<?php
-        $parms2 = array(
-        'type'=>'post',
 
-    );
-    $VPN = new WP_Query($parms2);
- ?>
-
-<?php if($VPN->have_posts()): ?>
-<?php while($VPN->have_posts()): $VPN->the_post();?>
-<?php the_post_thumbnail(); ?>
-<h3><?php the_title(); ?></h3>
-<div><?php the_content(); ?></div>
-
-<?php endwhile; ?>
-<?php endif; ?>
 
 
 

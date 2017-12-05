@@ -100,14 +100,14 @@ function newtheme_customize_css(){
 		color: <?php echo get_theme_mod('newtheme_text_colour'); ?>;
 	}
 
-	.menu-main-nav-container, .menu-programmes-container{
+	.menu-main-nav-container, .menu-vpn-container{
 		background-color: <?php echo get_theme_mod('newtheme_nav_colour'); ?>;
 	}
 
 	a:link,
 	a:visited,
 	#menu-main-nav li a,
-	#menu-programmes li a{
+	#menu-vpn li a{
 		color: <?php echo get_theme_mod('newtheme_link_colour'); ?>;
 	}
 
@@ -219,15 +219,17 @@ add_theme_support( 'custom-logo' );
 	        'public' => true,
 	        'show_ui' => true,
 	        'capability_type' => 'post',
-	        'hierarchical' => true,
-	        'rewrite' => array('slug' => 'VPN'),
+	        'hierarchical' => false,
+	        'rewrite' => array('slug' => 'vpn'),
 	        'query_var' => true,
 	        'menu_icon' => 'dashicons-clipboard',
 	        'supports' => array(
 	            'thumbnail',
 	            'title',
 	            'editor',),
+				'taxonomies' => array(
+					'category', 'post_tag'),
 	        );
-	    register_post_type( 'VPN', $args );
+	    register_post_type( 'vpn', $args );
 	}
 	add_action( 'init', 'VPN_init' );
