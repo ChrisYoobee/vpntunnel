@@ -197,6 +197,7 @@ add_theme_support( 'custom-logo' );
     add_image_size( 'board-game-thumbnail', 150, 150 );
 
 
+
 	function VPN_init() {
 	    $labels = array(
 	        'name'               => _x( 'VPN Info', 'post type general name' ),
@@ -222,14 +223,54 @@ add_theme_support( 'custom-logo' );
 	        'hierarchical' => false,
 	        'rewrite' => array('slug' => 'vpn'),
 	        'query_var' => true,
-	        'menu_icon' => 'dashicons-clipboard',
+	        'menu_icon' => 'dashicons-info',
 	        'supports' => array(
 	            'thumbnail',
 	            'title',
 	            'editor',),
-				'taxonomies' => array(
-					'category', 'post_tag'),
+	            'taxonomies' => array(
+	                'category', 'post_tag'),
 	        );
 	    register_post_type( 'vpn', $args );
 	}
 	add_action( 'init', 'VPN_init' );
+
+
+
+	function services_init() {
+		$labels = array(
+			'name'               => _x( 'services', 'post type general name' ),
+			'singular_name'      => _x( 'services', 'post type singular name' ),
+			'menu_name'          => _x( 'Services', 'admin menu' ),
+			'name_admin_bar'     => _x( 'services', 'add new on admin bar' ),
+			'add_new'            => _x( 'Add New services', 'services Info' ),
+			'add_new_item'       => __( 'Add New' ),
+			'new_item'           => __( 'New services' ),
+			'edit_item'          => __( 'Edit services' ),
+			'view_item'          => __( 'View services' ),
+			'all_items'          => __( 'All services' ),
+			'search_items'       => __( 'Search services' ),
+			'parent_item_colon'  => __( 'Parent services:' ),
+			'not_found'          => __( 'No services Info found.' ),
+			'not_found_in_trash' => __( 'No services found in Trash.' )
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'show_ui' => true,
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			'rewrite' => array('slug' => 'services'),
+			'query_var' => true,
+			'menu_icon' => 'dashicons-star-filled',
+			'supports' => array(
+				'price',
+				'title',
+				'editor',
+				'custom-fields',),
+				'taxonomies' => array(
+					'category', 'post_tag'),
+			);
+		register_post_type( 'services', $args );
+	}
+	add_action( 'init', 'services_init' );

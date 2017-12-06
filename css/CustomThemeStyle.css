@@ -211,12 +211,19 @@ li {
 	padding-bottom: 100px
 }
 
+.vpn-info{
+	padding-bottom: 20px;
+}
+
+
+
+/*Services Section*/
 
 .vpn-services{
 	height: 100vh;
 	width: 100%;
 	background-color: white;
-	
+
 }
 
 .basic-service{
@@ -253,6 +260,11 @@ li {
 .best-top-section h2{
 	color: white;
 }
+
+.service-title{
+	margin-top: 10ssspx;
+}
+
 
 
 /* Footer */
