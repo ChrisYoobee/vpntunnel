@@ -151,6 +151,7 @@ li {
     height: 56px;
     border-radius: 2px;
     background-color: #09a3c6;
+	display: inline-block;
 
 }
 
@@ -206,10 +207,7 @@ li {
 	padding-top: 100px;
 }
 
-.why-vpn-content-2{
-	padding-top: 100px;
-	padding-bottom: 100px
-}
+
 
 .vpn-info{
 	padding-bottom: 20px;
@@ -219,15 +217,20 @@ li {
 
 /*Services Section*/
 
+.services-title{
+	padding-bottom: 65px;
+}
+
 .vpn-services{
 	height: 100vh;
 	width: 100%;
 	background-color: white;
+	text-align: center;
 
 }
 
 .basic-service{
-	height: 500px;
+	height: 560px;
 	width: 90%;
 	background-color: #e4e4e4;
 	border-radius: 5px;
@@ -244,7 +247,9 @@ li {
 	height: 150px;
 	width: 100%;
 	background-color: #2A353C;
-	border-radius: 5px; F04E4E
+	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+	/* F04E4E the red colour */
 }
 .service-top-section h2{
 	color: white;
@@ -262,8 +267,34 @@ li {
 }
 
 .service-title{
-	margin-top: 10ssspx;
+	margin-top: 10px;
 }
+
+.services-content{
+	color: #666666;
+	padding-top: 30px;
+}
+
+.services-content h2{
+	color: black;
+	padding-top: 30px;
+	font-size: 3em;
+}
+
+.conditions h4{
+	font-size: 10px;
+}
+
+.conditions{
+	padding-top: 40px;
+	font-size: 10px;
+	margin-bottom: 0px;
+}
+
+.service-btn{
+	margin-top: 10px;
+}
+
 
 
 
@@ -273,6 +304,8 @@ li {
 	width: 100%;
 	height: 60vh;
 	background-color: #2a353c;
+	display: flex;
+	justify-content: center;
 }
 
 .footer p{
@@ -280,6 +313,7 @@ li {
 	text-align: center;
 	padding-top: 25px;
 }
+
 
 
 
@@ -303,14 +337,6 @@ li {
 }
 
 .footer-img{
-	position: absolute;
 	width: 100%;
-}
-
-.footer-img img{
-	position: absolute;
-    left: 0;
-    bottom: 0;
-    margin-bottom: -508px;
-    width: 100%;
+	align-self: flex-end;
 }
