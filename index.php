@@ -126,7 +126,7 @@
     </div>
 </div>
 
-<div class="vpn-services">
+<div id="vpn-services">
 
     <div class="row v-align">
         <?php
@@ -157,7 +157,7 @@
                 <div class="col-md-4 col-xs-12">
                     <div class="basic-service">
                         <div class="service-top-section">
-                            <h2 class="v-align"><?php the_title(); ?></h2>
+                            <h2 class="v-align"> <strong> <?php the_title(); ?></strong></h2>
                         </div>
                         <div class="services-content">
                             <div class="service-time"><h4><?php echo get_post_meta( $post->ID, 'subscriptionInfo', true ); echo $my_meta["subscriptionInfo"]; ?></h4></div>
@@ -165,14 +165,12 @@
                             <p>Per Month</p>
                             <div class="conditions">
                             <?php echo get_post_meta( $post->ID, 'billingConditions', true ); echo $my_meta["billingConditions"]; ?>
-                            <h4>30 Day Money Back Guarentee</h4>
+                            <h5>30 Day Money Back Guarentee</h5>
                             </div>
                         </div>
-                        <div class="btn-primary header-button service-btn">
+                        <div class=" btn-primary service-btn">
                             <h3>Get <?php echo get_post_meta( $post->ID, 'subscriptionInfo', true ); echo $my_meta["subscriptionInfo"]; ?></h3>
                         </div>
-
-
                     </div>
                 </div>
             <?php endwhile; ?>

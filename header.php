@@ -16,7 +16,7 @@
 
 
 
-	<div class="vpntunnel-nav">
+	<div class="vpntunnel-nav"  id="top">
 		<div class="logo-image">
 			<?php
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -42,8 +42,8 @@
 				</div>
 			</div>
 			<div class="col-sm-8 btn-placement ">
-				<div class="btn btn-primary header-button ">
-					<h4>Get VPN Tunnel</h4>
+				<div class="btn btn-primary header-button">
+				<a href="#vpn-services"><h4>Get VPN Tunnel</h4></a>
 					<img src="./wp-content/themes/vpntunnelTheme/assets/btn-arrow.png" alt="icon">
 				</div>
 			</div>

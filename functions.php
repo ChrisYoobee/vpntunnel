@@ -14,7 +14,7 @@ add_action('wp_enqueue_scripts', 'customThemeEnqueues');
 function customThemeSetUp(){
 	add_theme_support('menus');
 	register_nav_menu('primary', 'This is the main navigation, positioned at the top of the page');
-	register_nav_menu('seconday', 'This is the seconday navigation, located at the bottom of the page');
+
 
 
 }
@@ -144,27 +144,6 @@ function newTheme_footer_text($wp_customize){
 }
 add_action('customize_register', 'newTheme_footer_text');
 
-function bottomBanner_text($wp_customize){
-	//Settings
-	$wp_customize->add_setting('bottomBanner_text', array(
-		'default' => 'This is your bottom banner text',
-		'transport' => 'refresh'
-	));
-
-	//Section
-	$wp_customize->add_section('bottomBanner_text_section', array(
-		'title' => 'Bottom Banner Text'
-	));
-
-	//Control
-	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bottomBanner_text_control', array(
-		'label' => 'Bottom Banner Text',
-		'section' => 'bottomBanner_text_section',
-		'settings' => 'bottomBanner_text'
-	)));
-}
-add_action('customize_register', 'bottomBanner_text');
-
 
 function headerBanner_text($wp_customize){
 	//Settings
@@ -290,6 +269,10 @@ add_theme_support( 'custom-logo' );
             ),
 			'billingConditions' => array(
 				'title' => __('Billing Conditions'),
+				'type' => 'text'
+			),
+			'serviceColour' => array(
+				'title' => __(' Service Top Colour'),
 				'type' => 'text'
 			),
         )
