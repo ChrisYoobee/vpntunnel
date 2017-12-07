@@ -34,7 +34,22 @@
 
 	<?php if(is_front_page()): ?>
 	<div class="header" style="background-image: url(<?php header_image();?>); " height="<?php echo get_custom_header()->height; ?>" >
+		<div id="modal">
+			<div class="form-group username">
+				<label for="lastname">Username</label>
+				<input class="form-control" type="text" name="username" id="username">
+				<span class="input-errors"></span>
+			</div>
+			<div class="form-group password">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" name="password" id="password">
+				<span class="input-errors"></span>
+			</div>
+			<div class="log-in-btn">
+				<p>log in</p>
 
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="header-banner-text">

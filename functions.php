@@ -14,6 +14,8 @@ add_action('wp_enqueue_scripts', 'customThemeEnqueues');
 function customThemeSetUp(){
 	add_theme_support('menus');
 	register_nav_menu('primary', 'This is the main navigation, positioned at the top of the page');
+	//Add another menu for learn more and products and tools etc
+
 
 
 

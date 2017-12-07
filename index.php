@@ -18,7 +18,7 @@
 
     	<?php endwhile; ?>
         <?php endif; ?>
-        <div class="why-content">
+        <div class="why-content"  id="why-vpn" >
 	           <div class="row text">
 
                     <?php
@@ -156,7 +156,10 @@
             <?php while($VPN->have_posts()): $VPN->the_post();?>
                 <div class="col-md-4 col-xs-12">
                     <div class="basic-service">
-                        <div class="service-top-section">
+                        <?php $color =   get_post_meta( $post->ID, 'serviceColour', true ); ?>
+                        <div class="service-top-section" style="
+                                background-color: <?php echo $color; ?>;
+                        ">
                             <h2 class="v-align"> <strong> <?php the_title(); ?></strong></h2>
                         </div>
                         <div class="services-content">
