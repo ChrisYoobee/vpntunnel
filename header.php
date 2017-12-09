@@ -18,11 +18,14 @@
 
 	<div class="vpntunnel-nav"  id="top">
 		<div class="logo-image">
+
 			<?php
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
 				$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		 	?>
+		<a href="http://192.168.33.10/wordpress">
 			<img src=" <?= $image[0]; ?>  " class="logoimg">
+		</a>
 		</div>
 
 			<?php wp_nav_menu(array('theme_location'=>'primary')); ?>
@@ -47,7 +50,10 @@
 			</div>
 			<div class="log-in-btn">
 				<p>log in</p>
-
+			</div>
+			<div class="sign-up-btn">
+				<p>sign up</p>
+				<?php wp_create_user( $username, $password, $email ); ?> 
 			</div>
 		</div>
 		<div class="row">

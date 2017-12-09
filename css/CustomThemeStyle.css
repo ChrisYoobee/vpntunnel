@@ -82,15 +82,35 @@ li {
 	border-radius: 2px;
 	background-color: #F04E4E;
 	display: inline-block;
-	position: relative;
+	position: absolute;
 	color: white;
 	text-align: center;
 	z-index: 500;
 	margin-top: 200px;
-	margin-left: 120px;
+	margin-left: 132px;
 	cursor: pointer;
 }
 .log-in-btn p{
+	color: white;
+	padding-top: 4px;
+}
+
+.sign-up-btn{
+	width: 100px;
+	height: 30px;
+	border-radius: 2px;
+	background-color: #2A353C;
+	display: inline-block;
+	position: absolute;
+	color: white;
+	text-align: center;
+	z-index: 500;
+	margin-top: 200px;
+	margin-left: 14px;
+	cursor: pointer;
+}
+
+.sign-up-btn p{
 	color: white;
 	padding-top: 4px;
 }

@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 
 
 	$("#menu-item-125").click(function(){
-    $("#modal").show();
+    $("#modal").toggle();
 });
 
 
