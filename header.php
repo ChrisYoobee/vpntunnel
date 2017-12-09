@@ -38,6 +38,8 @@
 	<?php if(is_front_page()): ?>
 	<div class="header" style="background-image: url(<?php header_image();?>); " height="<?php echo get_custom_header()->height; ?>" >
 		<div id="modal">
+	
+
 			<div class="form-group username">
 				<label for="lastname">Username</label>
 				<input class="form-control" type="text" name="username" id="username">
@@ -53,7 +55,7 @@
 			</div>
 			<div class="sign-up-btn">
 				<p>sign up</p>
-				<?php wp_create_user( $username, $password, $email ); ?> 
+				<?php wp_create_user( $username, $password, $email ); ?>
 			</div>
 		</div>
 		<div class="row">

@@ -201,6 +201,7 @@ li {
     border-radius: 2px;
     background-color: #09a3c6;
 	display: inline-block;
+	transition: transform .8s ease-in-out;
 
 }
 
