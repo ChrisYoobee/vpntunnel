@@ -7,30 +7,79 @@
 
 
 
- <div class="payment-contaoiner"  id="why-vpn" >
-      <div class="row">
+ <div class="payment-container" >
 
-            <div class="why-vpn-content-3">
-           <div class="row">
-                     <?php
-                             $parms2 = array(
-                                 'post_type'=>'vpn',
-                             );
-                         $VPN = new WP_Query($parms2);
-                      ?>
-                     <?php if($VPN->have_posts()): ?>
-                     <?php while($VPN->have_posts()): $VPN->the_post();?>
-                     <div class="col-md-6 col-xs-12 vpn-info">
-                         <?php the_post_thumbnail(); ?>
-                         <h3><?php the_title(); ?></h3>
-                         <div><?php the_content(); ?></div>
-                     </div>
-                     <?php endwhile; ?>
-                     <?php endif; ?>
-             </div>
-             </div>
 
-    </div>
+     <?php
+             $parms2 = array(
+             'post_type'=>'services',
+         );
+         $VPN = new WP_Query($parms2);?>
+     <?php if($VPN->have_posts()): ?>
+     <?php while($VPN->have_posts()): $VPN->the_post();?>
+
+     <?php endwhile; ?>
+     <?php endif; ?>
+     <div class="testing">
+          <?php echo get_post_meta( $post->ID, 'billingConditions', true ); echo $my_meta["billingConditions"]; ?>
+     </div>
+
+                    <form class="credit-card">
+                      <div class="form-header">
+                        <h4 class="title">Credit card details</h4>
+                      </div>
+
+                      <div class="form-body">
+                        <!-- Card Number -->
+                        <input type="text" class="card-number" placeholder="Card Number">
+
+                        <!-- Date Field -->
+                        <div class="date-field">
+                          <div class="month">
+                            <select name="Month">
+                              <option value="january">January</option>
+                              <option value="february">February</option>
+                              <option value="march">March</option>
+                              <option value="april">April</option>
+                              <option value="may">May</option>
+                              <option value="june">June</option>
+                              <option value="july">July</option>
+                              <option value="august">August</option>
+                              <option value="september">September</option>
+                              <option value="october">October</option>
+                              <option value="november">November</option>
+                              <option value="december">December</option>
+                            </select>
+                          </div>
+                          <div class="year">
+                            <select name="Year">
+                              <option value="2017">2017</option>
+                              <option value="2018">2018</option>
+                              <option value="2019">2019</option>
+                              <option value="2020">2020</option>
+                              <option value="2021">2021</option>
+                              <option value="2022">2022</option>
+                              <option value="2023">2023</option>
+                              <option value="2024">2024</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Card Verification Field -->
+                        <div class="card-verification">
+                          <div class="cvv-input">
+                            <input type="text" placeholder="CVV">
+                          </div>
+                          <div class="cvv-details">
+                            <p>3 or 4 digits usually found <br> on the signature strip</p>
+                          </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <button type="submit" class="proceed-btn"><a href="#">Proceed</a></button>
+                      </div>
+                    </form>
+
  </div>
 
 

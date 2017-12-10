@@ -150,16 +150,14 @@
                     $parms2 = array(
                     'post_type'=>'services',
                 );
-                $VPN = new WP_Query($parms2);
-             ?>
+                $VPN = new WP_Query($parms2);?>
             <?php if($VPN->have_posts()): ?>
             <?php while($VPN->have_posts()): $VPN->the_post();?>
                 <div class="col-md-4 col-xs-12">
                     <div class="basic-service">
                         <?php $color =   get_post_meta( $post->ID, 'serviceColour', true ); ?>
                         <div class="service-top-section" style="
-                                background-color: <?php echo $color; ?>;
-                        ">
+                                background-color: <?php echo $color; ?>;">
                             <h2 class="v-align"> <strong> <?php the_title(); ?></strong></h2>
                         </div>
                         <div class="services-content">
@@ -172,7 +170,7 @@
                             </div>
                         </div>
                         <div class=" btn-primary service-btn">
-                            <a href="http://192.168.33.10/wordpress/subscription-payment/">  <h3>Get <?php echo get_post_meta( $post->ID, 'subscriptionInfo', true ); echo $my_meta["subscriptionInfo"]; ?></h3></a>
+                            <a href="http://192.168.33.10/wordpress/subscription-payment/" >  <h3>Get <?php echo get_post_meta( $post->ID, 'subscriptionInfo', true ); echo $my_meta["subscriptionInfo"]; ?></h3></a>
                         </div>
                     </div>
                 </div>
