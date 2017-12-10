@@ -379,7 +379,15 @@ li {
 }
 
 
+/*Subscription payment page*/
 
+.payment-container{
+	text-align: center;
+	margin-top: 50px;
+	align-self: auto;
+	height: 100vh;
+	background-color: white;
+}
 
 /* Footer */
 

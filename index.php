@@ -172,7 +172,7 @@
                             </div>
                         </div>
                         <div class=" btn-primary service-btn">
-                            <h3>Get <?php echo get_post_meta( $post->ID, 'subscriptionInfo', true ); echo $my_meta["subscriptionInfo"]; ?></h3>
+                            <a href="http://192.168.33.10/wordpress/subscription-payment/">  <h3>Get <?php echo get_post_meta( $post->ID, 'subscriptionInfo', true ); echo $my_meta["subscriptionInfo"]; ?></h3></a>
                         </div>
                     </div>
                 </div>
