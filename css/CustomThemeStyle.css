@@ -100,6 +100,10 @@ a:link{
 	padding-top: 14px;
 }
 
+.log-in-btn:hover{
+	background-color: #B13535;
+}
+
 .sign-up-btn{
 	width: 80%;
     height: 50px;
@@ -120,8 +124,8 @@ a:link{
 	padding-top: 14px;
 }
 
-.log-in-btn:hover{
-	background-color: #B13535;
+.sign-up-btn:hover{
+	background-color: #1c2023;
 }
 
 /*header*/
@@ -596,8 +600,34 @@ a:link{
 	padding-bottom: 30px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
 	.btn-placement{
 		padding-top: 40px;
 	}
+
+	.container{
+		height: 1500px;
+	}
+
+	#vpn-services{
+		height: 2200px;
+	}
+
+	.what-people-saying{
+		height: 500px;
+	}
+
+	.padding{
+		padding-bottom: 20px;
+	}
+
+	.service-center{
+		margin-left: 40px;
+	}
+
+}
+
+@media only screen and  (min-width: 768px){
+
+
 }

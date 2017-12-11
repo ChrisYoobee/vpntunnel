@@ -65,18 +65,18 @@
 
 
 
-</div>
+
 
 
 <div class="what-people-saying">
     <div class="row v-align">
         <div class="col-md-10 no-float ">
 
-            <div class="col-md-4 col-xs-12">
+            <div class="col-md-4 col-xs-12 padding">
                 <?php
                         $parms = array(
                         'type'=>'post',
-                        'category_name'=>'forbes'
+                        'category_name'=>'review-1'
                     );
                     $vpn = new WP_Query($parms);
                  ?>
@@ -89,11 +89,11 @@
                 <?php endif; ?>
             </div>
 
-            <div class="col-md-4 col-xs-12">
+            <div class="col-md-4 col-xs-12 padding">
                 <?php
                         $parms = array(
                         'type'=>'post',
-                        'category_name'=>'the-guardian'
+                        'category_name'=>'review-2'
                     );
                     $vpn = new WP_Query($parms);
                  ?>
@@ -105,11 +105,11 @@
                 <?php endif; ?>
             </div>
 
-            <div class="col-md-4 col-xs-12">
+            <div class="col-md-4 col-xs-12 padding">
                 <?php
                         $parms = array(
                         'type'=>'post',
-                        'category_name'=>'wsj'
+                        'category_name'=>'review-3'
                     );
                     $vpn = new WP_Query($parms);
                  ?>
@@ -153,7 +153,7 @@
                 $VPN = new WP_Query($parms2);?>
             <?php if($VPN->have_posts()): ?>
             <?php while($VPN->have_posts()): $VPN->the_post();?>
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-4 col-xs-12 service-center">
                     <div class="basic-service">
                         <?php $color =   get_post_meta( $post->ID, 'serviceColour', true ); ?>
                         <div class="service-top-section" style="

@@ -58,8 +58,13 @@
 				<p><?php echo get_theme_mod('newTheme_footer_text'); ?></p>
 			</div>
 			<div class="footer-img">
-				<img src="./wp-content/themes/vpntunnelTheme/assets/footer-img.png" alt="footer image">
+				<img src=  "<?php echo get_template_directory_uri() . '/assets/footer-img.png' ?> " alt="footer image">
+
+
+
+
 			</div>
+
 
 		</div>
 	</footer>

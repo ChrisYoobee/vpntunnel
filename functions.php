@@ -6,7 +6,7 @@ function customThemeEnqueues(){
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('bootstrapjs', get_template_directory_uri().'/js/bootstrap.min.js', array(), '3.3.7', true);
-	wp_enqueue_script('customScript', get_template_directory_uri() . '/js/customThemeScript.js', array(), '1.0.0', true );
+	wp_enqueue_script('customScript', get_template_directory_uri() . '/js/CustomThemeScript.js', array(), '1.0.0', true );
 }
 
 add_action('wp_enqueue_scripts', 'customThemeEnqueues');
@@ -26,7 +26,7 @@ add_action('init', 'customThemeSetUp');
 add_theme_support('custom-background');
 
 $customHeaderSetting = array(
-		'default-image' => '',
+		'default-image' => get_template_directory_uri() . '/assets/bg-vpnt.jpg',
 		'width' => 1280,
 		'height' => 700,
 		'flex-height' => false,
@@ -49,17 +49,17 @@ add_theme_support('post-formats', array('aside', 'image', 'video'));
 function customTheme_customize_colour($wp_customize){
 	//Settings
 	$wp_customize->add_setting('newtheme_text_colour', array(
-		'default' => '#000000',
+		'default' => '#ffffff',
 		'transport' => 'refresh'
 	));
 
 	$wp_customize->add_setting('newtheme_nav_colour', array(
-		'default' => '#000000',
+		'default' => '#ffffff',
 		'transport' => 'refresh'
 	));
 
 	$wp_customize->add_setting('newtheme_link_colour', array(
-		'default' => '#000000',
+		'default' => '#ffffff',
 		'transport' => 'refresh'
 	));
 
@@ -70,20 +70,9 @@ function customTheme_customize_colour($wp_customize){
 	));
 
 	//Add the Control
-	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'newtheme_text_colour_control', array(
-		'label' => __('Text Colour', 'New Custom Theme'),
-		'section' => 'colors',
-		'settings' => 'newtheme_text_colour',
-	)));
-
-	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'newtheme_nav_colour_control', array(
-		'label' => __('Navigation Colour', 'New Custom Theme'),
-		'section' => 'colors',
-		'settings' => 'newtheme_nav_colour',
-	)));
 
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'newtheme_link_colour_control', array(
-		'label' => __('Link Colour', 'New Custom Theme'),
+		'label' => __('Nav Colour', 'New Custom Theme'),
 		'section' => 'colors',
 		'settings' => 'newtheme_link_colour',
 	)));
@@ -150,7 +139,7 @@ add_action('customize_register', 'newTheme_footer_text');
 function headerBanner_text($wp_customize){
 	//Settings
 	$wp_customize->add_setting('headerBanner_text', array(
-		'default' => 'Take Back Your Privacy',
+		'default' => 'Header text here',
 		'transport' => 'refresh'
 	));
 
