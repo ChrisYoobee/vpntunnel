@@ -5,13 +5,28 @@
 			<div class="footer-text">
 				<div class="row">
 					<div class="col-md-4 col-xs-6">
-						<h4> <strong>Learn More</strong></h4>
+
+						<?php
+	                            $parms = array(
+	                            'type'=>'post',
+	                            'category_name'=>'footer-text-1'
+	                        );
+	                        $vpn = new WP_Query($parms);
+	                     ?>
+	                     <?php if($vpn->have_posts()): ?>
+	                         <?php while($vpn->have_posts()): $vpn->the_post();?>
+	                             <h3><?php the_title(); ?></h3>
+	                             <div><?php the_content(); ?></div>
+
+	                         <?php endwhile; ?>
+	                     <?php endif; ?>
+						<!-- <h4> <strong>Learn More</strong></h4>
 						<p>VPN for Mac</p>
 						<p>VPN for Windows</p>
 						<p>VPN for IOS</p>
 						<p>VPN for Android</p>
 						<p>VPN for Linux</p>
-						<p>VPN for TV</p>
+						<p>VPN for TV</p> -->
 					</div>
 					<div class="col-md-4 col-xs-6">
 						<h4> <strong>Products</strong></h4>

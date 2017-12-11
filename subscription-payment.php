@@ -76,9 +76,16 @@
                         </div>
 
                         <!-- Buttons -->
-                        <button type="submit" class="proceed-btn"><a href="#">Proceed</a></button>
+                        <button type="submit" class="proceed-btn" id="proceed" ><a href="#">Proceed</a></button>
                       </div>
                     </form>
+
+        <div id="payment-success">
+            <h3>Payment Successful!</h3>
+            <div class="btn btn-primary">
+                <a href="http://192.168.33.10/wordpress/">  <h4>Go back to home page</h4> </a>
+            </div>
+        </div>
 
  </div>
 

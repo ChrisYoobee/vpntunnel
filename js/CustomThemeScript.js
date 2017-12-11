@@ -8,6 +8,9 @@ jQuery(document).ready(function($){
 });
 
 
+$("#proceed").click(function(){
+$("#payment-success").show();
+});
 
 //smooth scrolling:
 $(function() {

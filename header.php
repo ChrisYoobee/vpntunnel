@@ -40,8 +40,8 @@
 		<div id="modal">
 
 
-			<div class="form-group username">
-				<label for="lastname">Username</label>
+			<!-- <div class="form-group username">
+				<label for="username">Username</label>
 				<input class="form-control" type="text" name="username" id="username">
 				<span class="input-errors"></span>
 			</div>
@@ -49,12 +49,12 @@
 				<label for="password">Password</label>
 				<input type="password" class="form-control" name="password" id="password">
 				<span class="input-errors"></span>
-			</div>
+			</div> -->
 			<div class="log-in-btn">
-				<a href="http://192.168.33.10/wordpress/wp-login.php"> <p>log in</p></a> 
+				<a href="http://192.168.33.10/wordpress/wp-login.php"> <p>log in</p></a>
 			</div>
 			<div class="sign-up-btn">
-				<a href="http://192.168.33.10/wordpress/wp-admin/user-new.php"> <p>sign up</p> </a>
+				<a href="http://192.168.33.10/wordpress/wp-signup.php"> <p>sign up</p> </a>
 				<?php wp_create_user( $username, $password, $email ); ?>
 			</div>
 		</div>
@@ -75,7 +75,7 @@
 
 
 
-<!-- 	<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="100%"> -->
+
 	</div>
 
 

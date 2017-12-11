@@ -54,7 +54,7 @@ a:link{
 
 #modal{
 	width: 250px;
-	height: 250px;
+	height:  231px;
 	background-color: #efefef;
 	position: absolute;
 	border-radius: 5px;
@@ -82,42 +82,42 @@ a:link{
 }
 
 .log-in-btn{
-	width: 100px;
-	height: 30px;
-	border-radius: 2px;
-	background-color: #F04E4E;
-	display: inline-block;
-	position: absolute;
-	color: white;
-	text-align: center;
-	z-index: 600;
-	margin-top: 200px;
-	margin-left: 132px;
-	cursor: pointer;
+	width: 80%;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #F04E4E;
+    display: inline-block;
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 600;
+    margin-top: 130px;
+    margin-left: 23px;
+    cursor: pointer;
 }
 .log-in-btn p{
 	color: white;
-	padding-top: 4px;
+	padding-top: 14px;
 }
 
 .sign-up-btn{
-	width: 100px;
-	height: 30px;
-	border-radius: 2px;
-	background-color: #2A353C;
-	display: inline-block;
-	position: absolute;
-	color: white;
-	text-align: center;
-	z-index: 500;
-	margin-top: 200px;
-	margin-left: 14px;
-	cursor: pointer;
+	width: 80%;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #2A353C;
+    display: inline-block;
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 500;
+    margin-top: 50px;
+    margin-left: 23px;
+    cursor: pointer;
 }
 
 .sign-up-btn p{
 	color: white;
-	padding-top: 4px;
+	padding-top: 14px;
 }
 
 .log-in-btn:hover{
@@ -536,6 +536,10 @@ a:link{
     background: url('paypal-logo.svg') no-repeat 65% 56% #009cde;
 }
 
+#payment-success{
+	display: none;
+}
+
 /* Footer */
 
 .footer{
@@ -560,7 +564,10 @@ a:link{
 	height: 50%;
 	margin-top: 50px;
 	z-index: 10;
+	color: white;
+	font-family: 'Montserrat';
 }
+
 
 .back-to-top{
 	align-self: flex-end;
