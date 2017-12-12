@@ -5,11 +5,7 @@
  ?>
  <?php get_header(); ?>
 
-
-
  <div class="payment-container" >
-
-
      <?php
              $parms2 = array(
              'post_type'=>'services',
@@ -17,7 +13,6 @@
          $VPN = new WP_Query($parms2);?>
      <?php if($VPN->have_posts()): ?>
      <?php while($VPN->have_posts()): $VPN->the_post();?>
-
      <?php endwhile; ?>
      <?php endif; ?>
      <div class="testing">

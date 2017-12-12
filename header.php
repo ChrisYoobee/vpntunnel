@@ -2,6 +2,7 @@
 	<title>Wordpress Refresh</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<script src="https://use.fontawesome.com/85d9a8ee37.js"></script>
 	<?php wp_head(); ?>
 </head>
 <?php
@@ -14,11 +15,8 @@
  ?>
 <body <?php body_class($bodyClass); ?>>
 
-
-
 	<div class="vpntunnel-nav"  id="top">
 		<div class="logo-image">
-
 			<?php
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
 				$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -27,29 +25,14 @@
 			<img src=" <?= $image[0]; ?>  " class="logoimg">
 		</a>
 		</div>
-
-			<?php wp_nav_menu(array('theme_location'=>'primary')); ?>
-
-
-
+		<?php wp_nav_menu(array('theme_location'=>'primary')); ?>
 	</div>
-
-
 	<?php if(is_front_page()): ?>
 	<div class="header" style="background-image: url(<?php header_image();?>); " height="<?php echo get_custom_header()->height; ?>" >
 		<div id="modal">
-
-
-			<!-- <div class="form-group username">
-				<label for="username">Username</label>
-				<input class="form-control" type="text" name="username" id="username">
-				<span class="input-errors"></span>
+			<div id="close">
+				<i class="fa fa-times" id="close-btn" ?></i>
 			</div>
-			<div class="form-group password">
-				<label for="password">Password</label>
-				<input type="password" class="form-control" name="password" id="password">
-				<span class="input-errors"></span>
-			</div> -->
 			<div class="log-in-btn">
 				<a href="http://192.168.33.10/wordpress/wp-login.php"> <p>log in</p></a>
 			</div>
@@ -71,14 +54,7 @@
 				</div>
 			</div>
 		</div>
-
-
-
-
-
 	</div>
 
 
 	<?php endif; ?>
-
-	
