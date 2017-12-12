@@ -48,16 +48,6 @@ add_theme_support('post-formats', array('aside', 'image', 'video'));
 //Customize colours
 function customTheme_customize_colour($wp_customize){
 	//Settings
-	$wp_customize->add_setting('newtheme_text_colour', array(
-		'default' => '#ffffff',
-		'transport' => 'refresh'
-	));
-
-	$wp_customize->add_setting('newtheme_nav_colour', array(
-		'default' => '#ffffff',
-		'transport' => 'refresh'
-	));
-
 	$wp_customize->add_setting('newtheme_link_colour', array(
 		'default' => '#ffffff',
 		'transport' => 'refresh'
